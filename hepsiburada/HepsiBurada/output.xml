@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191208 20:49:22.924" generator="Robot 3.1.2 (Python 2.7.8 on win32)">
+<suite source="C:\Users\Afe PC\Desktop\hepsiburada\HepsiBurada" id="s1" name="HepsiBurada">
+<suite source="C:\Users\Afe PC\Desktop\hepsiburada\HepsiBurada\Tests" id="s1-s1" name="Tests">
+<suite source="C:\Users\Afe PC\Desktop\hepsiburada\HepsiBurada\Tests\test.robot" id="s1-s1-s1" name="Test">
+<test id="s1-s1-s1-t1" name="Test">
+<kw name="Hepsiburada Web Sayfasini Ac" library="CommonWeb">
+<doc>hepsiburada.com websitesi acilir.</doc>
+<arguments>
+<arg>chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.hepsiburada.com/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:23.282" level="INFO">Opening browser 'chrome' to base url 'https://www.hepsiburada.com/'.</msg>
+<status status="PASS" endtime="20191208 20:49:32.992" starttime="20191208 20:49:23.281"></status>
+</kw>
+<status status="PASS" endtime="20191208 20:49:32.993" starttime="20191208 20:49:23.281"></status>
+</kw>
+<kw name="Hesabima Giris Yap" library="Login">
+<doc>Login sayfasi acilarak giris yapilir. Login sayfa kontrolu "hepsiburada.com" logosu ve "giris yap" basligi ile yapilir</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${header_logo_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:33.027" level="INFO">Current page contains element '//div[@class='header-global container']/a[@class='logo-hepsiburada']'.</msg>
+<status status="PASS" endtime="20191208 20:49:33.028" starttime="20191208 20:49:32.995"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${my_account_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:33.029" level="INFO">Simulating Mouse Over on element '//div[@id='myAccount']'.</msg>
+<status status="PASS" endtime="20191208 20:49:33.597" starttime="20191208 20:49:33.028"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_element_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:33.600" level="INFO">Clicking element '//a[@id='login']'.</msg>
+<status status="PASS" endtime="20191208 20:49:35.359" starttime="20191208 20:49:33.598"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${login_title_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:35.426" level="INFO">Current page contains element '//header[@class='box-header login-header group']'.</msg>
+<status status="PASS" endtime="20191208 20:49:35.426" starttime="20191208 20:49:35.359"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_selection_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:35.427" level="INFO">Clicking element '//label[@for='select-login']'.</msg>
+<status status="PASS" endtime="20191208 20:49:35.550" starttime="20191208 20:49:35.427"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${email_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:35.551" level="INFO">Clicking element '//input[@id='email']'.</msg>
+<status status="PASS" endtime="20191208 20:49:35.620" starttime="20191208 20:49:35.551"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_locator}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:35.621" level="INFO">Typing text 'noyanipek@gmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" endtime="20191208 20:49:35.785" starttime="20191208 20:49:35.621"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${password_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:35.785" level="INFO">Clicking element '//input[@id='password']'.</msg>
+<status status="PASS" endtime="20191208 20:49:35.866" starttime="20191208 20:49:35.785"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:35.868" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
+<status status="PASS" endtime="20191208 20:49:35.947" starttime="20191208 20:49:35.867"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${giris_button_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:35.948" level="INFO">Clicking element '//button[@class='btn full btn-login-submit']'.</msg>
+<status status="PASS" endtime="20191208 20:49:36.056" starttime="20191208 20:49:35.948"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${my_account_locator}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:40.725" starttime="20191208 20:49:36.056"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${logout_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:40.767" level="INFO">Current page contains element '//a[@class='logout']'.</msg>
+<status status="PASS" endtime="20191208 20:49:40.767" starttime="20191208 20:49:40.727"></status>
+</kw>
+<status status="PASS" endtime="20191208 20:49:40.768" starttime="20191208 20:49:32.993"></status>
+</kw>
+<kw name="Urun Ara" library="UrunSecimi">
+<doc>Kitap arama fonksiyonu(parametrik yapilabilir) Sayfa kontrolu "urun arama" alani ile yapilir</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${product_search_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:40.791" level="INFO">Current page contains element '//input[@id='productSearch']'.</msg>
+<status status="PASS" endtime="20191208 20:49:40.792" starttime="20191208 20:49:40.769"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${product_search_locator}</arg>
+<arg>Şeker Portakalı</arg>
+</arguments>
+<msg timestamp="20191208 20:49:40.794" level="INFO">Typing text 'Şeker Portakalı' into text field '//input[@id='productSearch']'.</msg>
+<status status="PASS" endtime="20191208 20:49:41.300" starttime="20191208 20:49:40.793"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_button_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:41.301" level="INFO">Clicking element 'buttonProductSearch'.</msg>
+<status status="PASS" endtime="20191208 20:49:43.819" starttime="20191208 20:49:41.301"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${product_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:43.821" level="INFO">Clicking element '//div[@class='box product']'.</msg>
+<status status="PASS" endtime="20191208 20:49:46.351" starttime="20191208 20:49:43.820"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_to_cart_button_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:46.353" level="INFO">Clicking element 'addToCart'.</msg>
+<status status="PASS" endtime="20191208 20:49:46.818" starttime="20191208 20:49:46.352"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191208 20:49:49.820" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191208 20:49:49.820" starttime="20191208 20:49:46.819"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${sepete_basarili_eklendi_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:49.838" level="INFO">Current page contains element '//div[@id='notification'][text()='Ürün başarılı bir şekilde sepete eklenmiştir.']'.</msg>
+<status status="PASS" endtime="20191208 20:49:49.838" starttime="20191208 20:49:49.820"></status>
+</kw>
+<status status="PASS" endtime="20191208 20:49:49.839" starttime="20191208 20:49:40.768"></status>
+</kw>
+<kw name="Sepete Git ve Alisverişe Devam Et" library="UrunSecimi">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${sepete_basarili_eklendi_locator}</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:49.867" starttime="20191208 20:49:49.840"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${sepete_git_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:49.868" level="INFO">Clicking element '//a[@id='shoppingCart']'.</msg>
+<status status="PASS" endtime="20191208 20:49:50.648" starttime="20191208 20:49:49.868"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${sepete_git_locator}</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:51.065" starttime="20191208 20:49:50.648"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sepetim_title_locator}</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:51.111" starttime="20191208 20:49:51.066"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${alisverisi_tamamla_buton_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:51.112" level="INFO">Clicking element '//div[@class='cart-proceed-container']/button/span[text()='Alışverişi Tamamla']'.</msg>
+<status status="PASS" endtime="20191208 20:49:51.500" starttime="20191208 20:49:51.112"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${devamet_buton_locator}</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:52.372" starttime="20191208 20:49:51.501"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${teslimat_adresi_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:52.624" level="INFO">Current page contains element '//div[@id='addresses']'.</msg>
+<status status="PASS" endtime="20191208 20:49:52.624" starttime="20191208 20:49:52.373"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${devamet_buton_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:52.625" level="INFO">Clicking element '//button[@class='btn btn-primary full']'.</msg>
+<status status="PASS" endtime="20191208 20:49:52.848" starttime="20191208 20:49:52.625"></status>
+</kw>
+<status status="PASS" endtime="20191208 20:49:52.848" starttime="20191208 20:49:49.839"></status>
+</kw>
+<kw name="Odeme Yontemi Sec" library="OdemeYap">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${odeme_yontemleri_container_locator}</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:53.419" starttime="20191208 20:49:52.849"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${odeme_bilgileri_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:53.430" level="INFO">Current page contains element '//li[@class='list-item nav-payment current']'.</msg>
+<status status="PASS" endtime="20191208 20:49:53.431" starttime="20191208 20:49:53.420"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${odeme_yontemi_havale_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:53.432" level="INFO">Clicking element '//span[text()='Havale']'.</msg>
+<status status="PASS" endtime="20191208 20:49:53.754" starttime="20191208 20:49:53.431"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${havale_yapilacak_hesap_locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:54.000" starttime="20191208 20:49:53.754"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191208 20:49:59.001" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191208 20:49:59.001" starttime="20191208 20:49:54.001"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${havale_yapilacak_hesap_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:59.002" level="INFO">Clicking element '//*[@for='bank-5']'.</msg>
+<status status="PASS" endtime="20191208 20:49:59.188" starttime="20191208 20:49:59.001"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${devamet_buton_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:59.189" level="INFO">Clicking element '//button[@class='btn btn-primary full']'.</msg>
+<status status="PASS" endtime="20191208 20:49:59.318" starttime="20191208 20:49:59.189"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${sparis_sonrasi_odeme_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:59.320" level="INFO">Clicking element '//div[@class='eft-button iban-eft']'.</msg>
+<status status="PASS" endtime="20191208 20:49:59.408" starttime="20191208 20:49:59.319"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${devamet_havale_buton_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:49:59.409" level="INFO">Clicking element '//button[@class='btn long']'.</msg>
+<status status="PASS" endtime="20191208 20:49:59.508" starttime="20191208 20:49:59.409"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${teslimat_bilgileri_locator}</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:49:59.523" starttime="20191208 20:49:59.508"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191208 20:50:02.524" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191208 20:50:02.526" starttime="20191208 20:49:59.523"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${devamet_buton_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:50:02.532" level="INFO">Clicking element '//button[@class='btn btn-primary full']'.</msg>
+<status status="PASS" endtime="20191208 20:50:02.620" starttime="20191208 20:50:02.530"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${siparisiniz_alindi_header_locator}</arg>
+<arg>Sayfa "Siparisiniz alindi" basligini icermelidir.</arg>
+</arguments>
+<msg timestamp="20191208 20:50:04.342" level="INFO">Current page contains element '//*[@class='box-header-title']'.</msg>
+<status status="PASS" endtime="20191208 20:50:04.343" starttime="20191208 20:50:02.621"></status>
+</kw>
+<status status="PASS" endtime="20191208 20:50:04.344" starttime="20191208 20:49:52.848"></status>
+</kw>
+<kw name="Siparisi Iptal Et" library="SiparisIptal">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${siparislerim_link_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:50:04.346" level="INFO">Clicking element '//*[@class='link-type-one'][text()='Siparişlerim']'.</msg>
+<status status="PASS" endtime="20191208 20:50:05.985" starttime="20191208 20:50:04.345"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${iptal_et_buton_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:50:05.988" level="INFO">Clicking element '//*[@type='button'][text()='İptal Et']'.</msg>
+<status status="PASS" endtime="20191208 20:50:06.170" starttime="20191208 20:50:05.986"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${iptal_nedeni_list_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:50:06.171" level="INFO">Clicking element '//*[@class='hb-form-selectbox']'.</msg>
+<status status="PASS" endtime="20191208 20:50:06.263" starttime="20191208 20:50:06.171"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${iptal_nedeni_locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:50:06.302" starttime="20191208 20:50:06.263"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${iptal_nedeni_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:50:06.303" level="INFO">Clicking element '//*[@class='selectbox-result__list']/li[text()='Ürünleri almaktan vazgeçtim']'.</msg>
+<status status="PASS" endtime="20191208 20:50:06.363" starttime="20191208 20:50:06.302"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@class='selectbox-placeholder']/span[text()='Ürünleri almaktan vazgeçtim']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:50:06.380" starttime="20191208 20:50:06.364"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${secili_urunleri_iptalet_locator}</arg>
+</arguments>
+<msg timestamp="20191208 20:50:06.381" level="INFO">Clicking element '//*[@type='button'][text()='Seçili Ürünleri İptal Et']'.</msg>
+<status status="PASS" endtime="20191208 20:50:06.449" starttime="20191208 20:50:06.380"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>//*[@class='alert-inner-bar__text']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20191208 20:50:06.465" starttime="20191208 20:50:06.449"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${result_text_locator}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191208 20:50:06.877" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-87.png"&gt;&lt;img src="selenium-screenshot-87.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191208 20:50:06.878" starttime="20191208 20:50:06.510"></status>
+</kw>
+<msg timestamp="20191208 20:50:06.882" level="FAIL">Page should have contained element '//*[@class='alert-inner-bar__text'][text()='Ürün iptal edildi']' but did not.</msg>
+<status status="FAIL" endtime="20191208 20:50:06.882" starttime="20191208 20:50:06.466"></status>
+</kw>
+<status status="FAIL" endtime="20191208 20:50:06.883" starttime="20191208 20:50:04.344"></status>
+</kw>
+<status status="FAIL" endtime="20191208 20:50:06.883" critical="yes" starttime="20191208 20:49:23.280">Page should have contained element '//*[@class='alert-inner-bar__text'][text()='Ürün iptal edildi']' but did not.</status>
+</test>
+<status status="FAIL" endtime="20191208 20:50:06.884" starttime="20191208 20:49:22.996"></status>
+</suite>
+<status status="FAIL" endtime="20191208 20:50:06.890" starttime="20191208 20:49:22.993"></status>
+</suite>
+<status status="FAIL" endtime="20191208 20:50:06.892" starttime="20191208 20:49:22.961"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="HepsiBurada" pass="0">HepsiBurada</stat>
+<stat fail="1" id="s1-s1" name="Tests" pass="0">HepsiBurada.Tests</stat>
+<stat fail="1" id="s1-s1-s1" name="Test" pass="0">HepsiBurada.Tests.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
